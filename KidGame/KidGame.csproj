@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{04A1DCFB-276B-4495-A0D2-7C039CA4AF8E}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KidGame</RootNamespace>
+    <AssemblyName>KidGame</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>KidGame_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>KidGame.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <ExpressionBlendVersion>12.0.50429.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Effects\TiltEffect.cs" />
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\OtherClasses.cs" />
+    <Compile Include="Models\Question.cs" />
+    <Compile Include="Models\QuestionManager.cs" />
+    <Compile Include="Services\GeneralService.cs" />
+    <Compile Include="Views\ConceptPage.xaml.cs">
+      <DependentUpon>ConceptPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LearnMenu.xaml.cs">
+      <DependentUpon>LearnMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Concept.cs" />
+    <Compile Include="Models\GameRank.cs" />
+    <Compile Include="Models\GameUser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\UtilityService.cs" />
+    <Compile Include="Views\QuestionPage.xaml.cs">
+      <DependentUpon>QuestionPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Views\ConceptPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LearnMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\QuestionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Fonts\Comix Loud.ttf">
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+      <Uppercase>True</Uppercase>
+      <Lowercase>True</Lowercase>
+      <Numbers>True</Numbers>
+      <Punctuation>True</Punctuation>
+    </Resource>
+    <None Include="Assets\Fonts\JandaManateeSolid.ttf" />
+    <BlendEmbeddedFont Include="Assets\Fonts\KBStickToThePlan.ttf">
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+      <Uppercase>True</Uppercase>
+      <Lowercase>True</Lowercase>
+      <Numbers>True</Numbers>
+      <Punctuation>True</Punctuation>
+    </BlendEmbeddedFont>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Icons\appicon.png" />
+    <Content Include="Assets\Icons\appicon_159.png" />
+    <Content Include="Assets\Icons\appicon_336.png" />
+    <Content Include="Assets\Icons\car.png" />
+    <Content Include="Assets\Icons\flag.png" />
+    <Content Include="Assets\Icons\fruit.png" />
+    <Content Include="Assets\Icons\parrot.png" />
+    <Content Include="Assets\Icons\speaker.png" />
+    <Content Include="Assets\Icons\star.png" />
+    <Content Include="Assets\Images\1.png" />
+    <Content Include="Assets\Images\2.png" />
+    <Content Include="Assets\Images\3.png" />
+    <Content Include="Assets\Images\cloudbg1.png" />
+    <Content Include="Assets\Images\title.png" />
+    <Content Include="Assets\Pictures\Animals\bird.png" />
+    <Content Include="Assets\Pictures\Animals\bunny.png" />
+    <Content Include="Assets\Pictures\Animals\cat.png" />
+    <Content Include="Assets\Pictures\Animals\chicken.png" />
+    <Content Include="Assets\Pictures\Animals\cow.png" />
+    <Content Include="Assets\Pictures\Animals\crab.png" />
+    <Content Include="Assets\Pictures\Animals\dog.png" />
+    <Content Include="Assets\Pictures\Animals\dolphin.png" />
+    <Content Include="Assets\Pictures\Animals\donkey.png" />
+    <Content Include="Assets\Pictures\Animals\duck.png" />
+    <Content Include="Assets\Pictures\Animals\fish.png" />
+    <Content Include="Assets\Pictures\Animals\frog.png" />
+    <Content Include="Assets\Pictures\Animals\hamster.png" />
+    <Content Include="Assets\Pictures\Animals\horse.png" />
+    <Content Include="Assets\Pictures\Animals\jellyfish.png" />
+    <Content Include="Assets\Pictures\Animals\lobster.png" />
+    <Content Include="Assets\Pictures\Animals\mouse.png" />
+    <Content Include="Assets\Pictures\Animals\octopus.png" />
+    <Content Include="Assets\Pictures\Animals\parrot.png" />
+    <Content Include="Assets\Pictures\Animals\pig.png" />
+    <Content Include="Assets\Pictures\Animals\shark.png" />
+    <Content Include="Assets\Pictures\Animals\sheep.png" />
+    <Content Include="Assets\Pictures\Animals\squid.png" />
+    <Content Include="Assets\Pictures\Animals\squirrel.png" />
+    <Content Include="Assets\Pictures\Animals\turtle.png" />
+    <Content Include="Assets\Pictures\Animals\whale.png" />
+    <Content Include="Assets\Pictures\Christmas\candle.png" />
+    <Content Include="Assets\Pictures\Christmas\candy.png" />
+    <Content Include="Assets\Pictures\Christmas\candy_cane.png" />
+    <Content Include="Assets\Pictures\Christmas\christmas_ball.png" />
+    <Content Include="Assets\Pictures\Christmas\christmas_tree.png" />
+    <Content Include="Assets\Pictures\Christmas\deer.png" />
+    <Content Include="Assets\Pictures\Christmas\firework.png" />
+    <Content Include="Assets\Pictures\Christmas\gift.png" />
+    <Content Include="Assets\Pictures\Christmas\gingerbread_men.png" />
+    <Content Include="Assets\Pictures\Christmas\hat.png" />
+    <Content Include="Assets\Pictures\Christmas\ice_skate.png" />
+    <Content Include="Assets\Pictures\Christmas\jingle_bell.png" />
+    <Content Include="Assets\Pictures\Christmas\mitten.png" />
+    <Content Include="Assets\Pictures\Christmas\penguin.png" />
+    <Content Include="Assets\Pictures\Christmas\santa.png" />
+    <Content Include="Assets\Pictures\Christmas\sleigh.png" />
+    <Content Include="Assets\Pictures\Christmas\snowflake.png" />
+    <Content Include="Assets\Pictures\Christmas\snowman.png" />
+    <Content Include="Assets\Pictures\Christmas\sock.png" />
+    <Content Include="Assets\Pictures\Christmas\star.png" />
+    <Content Include="Assets\Pictures\Countries\America.png" />
+    <Content Include="Assets\Pictures\Countries\Arabia.png" />
+    <Content Include="Assets\Pictures\Countries\Argentina.png" />
+    <Content Include="Assets\Pictures\Countries\Australia.png" />
+    <Content Include="Assets\Pictures\Countries\Brasil.png" />
+    <Content Include="Assets\Pictures\Countries\Canada.png" />
+    <Content Include="Assets\Pictures\Countries\Chile.png" />
+    <Content Include="Assets\Pictures\Countries\China.png" />
+    <Content Include="Assets\Pictures\Countries\Colombia.png" />
+    <Content Include="Assets\Pictures\Countries\Denmark.png" />
+    <Content Include="Assets\Pictures\Countries\Egypt.png" />
+    <Content Include="Assets\Pictures\Countries\Finland.png" />
+    <Content Include="Assets\Pictures\Countries\France.png" />
+    <Content Include="Assets\Pictures\Countries\Germany.png" />
+    <Content Include="Assets\Pictures\Countries\Greece.png" />
+    <Content Include="Assets\Pictures\Countries\Guatemala.png" />
+    <Content Include="Assets\Pictures\Countries\Ireland.png" />
+    <Content Include="Assets\Pictures\Countries\Italia.png" />
+    <Content Include="Assets\Pictures\Countries\Japan.png" />
+    <Content Include="Assets\Pictures\Countries\Libya.png" />
+    <Content Include="Assets\Pictures\Countries\Mexico.png" />
+    <Content Include="Assets\Pictures\Countries\Netherlands.png" />
+    <Content Include="Assets\Pictures\Countries\NewZealand.png" />
+    <Content Include="Assets\Pictures\Countries\Norway.png" />
+    <Content Include="Assets\Pictures\Countries\Poland.png" />
+    <Content Include="Assets\Pictures\Countries\Russia.png" />
+    <Content Include="Assets\Pictures\Countries\Spain.png" />
+    <Content Include="Assets\Pictures\Countries\Sweden.png" />
+    <Content Include="Assets\Pictures\Countries\Venezuela.png" />
+    <Content Include="Assets\Pictures\Countries\Zambia.png" />
+    <Content Include="Assets\Pictures\Fruits\apple.png" />
+    <Content Include="Assets\Pictures\Fruits\apricot.png" />
+    <Content Include="Assets\Pictures\Fruits\banana.png" />
+    <Content Include="Assets\Pictures\Fruits\cherry.png" />
+    <Content Include="Assets\Pictures\Fruits\kiwi.png" />
+    <Content Include="Assets\Pictures\Fruits\lemon.png" />
+    <Content Include="Assets\Pictures\Fruits\mango.png" />
+    <Content Include="Assets\Pictures\Fruits\orange.png" />
+    <Content Include="Assets\Pictures\Fruits\peach.png" />
+    <Content Include="Assets\Pictures\Fruits\pear.png" />
+    <Content Include="Assets\Pictures\Fruits\strawberry.png" />
+    <Content Include="Assets\Pictures\Transportations\airplane.png" />
+    <Content Include="Assets\Pictures\Transportations\ambulance.png" />
+    <Content Include="Assets\Pictures\Transportations\car.png" />
+    <Content Include="Assets\Pictures\Transportations\firetruck.png" />
+    <Content Include="Assets\Pictures\Transportations\helicopter.png" />
+    <Content Include="Assets\Pictures\Transportations\motorcycle.png" />
+    <Content Include="Assets\Pictures\Transportations\police_car.png" />
+    <Content Include="Assets\Pictures\Transportations\ship.png" />
+    <Content Include="Assets\Pictures\Transportations\train.png" />
+    <Content Include="Assets\Pictures\Transportations\truck.png" />
+    <Content Include="Assets\Sounds\Animals\bird.mp3" />
+    <Content Include="Assets\Sounds\Animals\cat.mp3" />
+    <Content Include="Assets\Sounds\Animals\cow.mp3" />
+    <Content Include="Assets\Sounds\Animals\dog.mp3" />
+    <Content Include="Assets\Sounds\Animals\dolphin.mp3" />
+    <Content Include="Assets\Sounds\Animals\duck.mp3" />
+    <Content Include="Assets\Sounds\Animals\frog.mp3" />
+    <Content Include="Assets\Sounds\Animals\horse.mp3" />
+    <Content Include="Assets\Sounds\Animals\pig.mp3" />
+    <Content Include="Assets\Sounds\Animals\mouse.mp3" />
+    <Content Include="Assets\Sounds\Countries\America.mp3" />
+    <Content Include="Assets\Sounds\Countries\Argentina.mp3" />
+    <Content Include="Assets\Sounds\Countries\Australia.mp3" />
+    <Content Include="Assets\Sounds\Countries\Brasil.mp3" />
+    <Content Include="Assets\Sounds\Countries\China.mp3" />
+    <Content Include="Assets\Sounds\Countries\France.mp3" />
+    <Content Include="Assets\Sounds\Countries\Germany.mp3" />
+    <Content Include="Assets\Sounds\Countries\Greece.mp3" />
+    <Content Include="Assets\Sounds\Countries\Italia.mp3" />
+    <Content Include="Assets\Sounds\Countries\Japan.mp3" />
+    <Content Include="Assets\Sounds\Countries\Russia.mp3" />
+    <Content Include="Assets\Sounds\Countries\Spain.mp3" />
+    <Content Include="Assets\Sounds\Transportations\airplane.mp3" />
+    <Content Include="Assets\Sounds\Transportations\ambulance.mp3" />
+    <Content Include="Assets\Sounds\Transportations\car.mp3" />
+    <Content Include="Assets\Sounds\Transportations\firetruck.mp3" />
+    <Content Include="Assets\Sounds\Transportations\helicopter.mp3" />
+    <Content Include="Assets\Sounds\Transportations\motorcycle.mp3" />
+    <Content Include="Assets\Sounds\Transportations\police_car.mp3" />
+    <Content Include="Assets\Sounds\Transportations\train.mp3" />
+    <Content Include="Assets\Sounds\Transportations\truck.mp3" />
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReadMe.Coding4Fun.Toolkit.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Coding4Fun.Toolkit.Net">
+      <HintPath>..\packages\Coding4Fun.Toolkit.Net.2.0.7\lib\windowsphone8\Coding4Fun.Toolkit.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.BackgroundAgentTools">
+      <HintPath>..\packages\Telerik 2014\Telerik.Windows.BackgroundAgentTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Behaviors">
+      <HintPath>..\packages\Telerik 2014\Telerik.Windows.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Chart">
+      <HintPath>..\packages\Telerik 2014\Telerik.Windows.Controls.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Data">
+      <HintPath>..\packages\Telerik 2014\Telerik.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.DataVisualization">
+      <HintPath>..\packages\Telerik 2014\Telerik.Windows.Controls.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.ImageEditor">
+      <HintPath>..\packages\Telerik 2014\Telerik.Windows.Controls.ImageEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <HintPath>..\packages\Telerik 2014\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Primitives">
+      <HintPath>..\packages\Telerik 2014\Telerik.Windows.Controls.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Core">
+      <HintPath>..\packages\Telerik 2014\Telerik.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data">
+      <HintPath>..\packages\Telerik 2014\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Expression\Blend\WindowsPhone\v8.0\Microsoft.Expression.Blend.WindowsPhone.targets" />
+</Project>
